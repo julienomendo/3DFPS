@@ -36,8 +36,8 @@ Arena = function(game,props) {
     boxArena.material = materialGround;
     boxArena.position.y = 50 * 1;
     boxArena.scaling.y = 1;
-    boxArena.scaling.z = 10;
-    boxArena.scaling.x = 10;
+    boxArena.scaling.z = 50;
+    boxArena.scaling.x = 50;
 
     boxArena.checkCollisions = true;
 
