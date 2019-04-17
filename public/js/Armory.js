@@ -13,7 +13,7 @@ Armory = function(game, player) {
                 'range': 4,
                 'damage' : 20,
                 'cadency' : 500,
-                'colorMesh' : new BABYLON.Color3((59/255), (195/255), (203/255))
+                'colorMesh' : new BABYLON.Color3((100/255), (195/255), (203/255))
             }
         },
         {

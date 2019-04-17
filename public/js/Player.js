@@ -34,16 +34,16 @@ Player = function(game, canvas) {
         if(evt.keyCode == 38 || evt.keyCode == 40 || evt.keyCode == 37 || evt.keyCode == 39 ){
             switch(evt.keyCode){
                 case 38:
-                _this.camera.axisMovement[0] = false;
-                break;
-                case 40:
                 _this.camera.axisMovement[1] = false;
                 break;
+                case 40:
+                _this.camera.axisMovement[0] = false;
+                break;
                 case 37:
-                _this.camera.axisMovement[2] = false;
+                _this.camera.axisMovement[3] = false;
                 break;
                 case 39:
-                _this.camera.axisMovement[3] = false;
+                _this.camera.axisMovement[2] = false;
                 break;
             }
             var data={
@@ -59,16 +59,16 @@ Player = function(game, canvas) {
         if(evt.keyCode == 38 || evt.keyCode == 40 || evt.keyCode == 37 || evt.keyCode == 39 ){
             switch(evt.keyCode){
                 case 38:
-                _this.camera.axisMovement[0] = true;
-                break;
-                case 40:
                 _this.camera.axisMovement[1] = true;
                 break;
+                case 40:
+                _this.camera.axisMovement[0] = true;
+                break;
                 case 37:
-                _this.camera.axisMovement[2] = true;
+                _this.camera.axisMovement[3] = true;
                 break;
                 case 39:
-                _this.camera.axisMovement[3] = true;
+                _this.camera.axisMovement[2] = true;
                 break;
                 // case 13:
                 //     _this.newDeadEnnemy();
@@ -85,7 +85,7 @@ Player = function(game, canvas) {
     // Quand la souris bouge dans la scène
     window.addEventListener("mousemove", function(evt) {
         if(_this.rotEngaged === true){
-            _this.camera.playerBox.rotation.y+=evt.movementX * 0.001 * (_this.angularSensibility / 250);
+            _this.camera.playerBox.rotation.y+=evt.movementX * 0.001 * (_this.angularSensibility / 250   );
             var nextRotationX = _this.camera.playerBox.rotation.x + (evt.movementY * 0.001 * (_this.angularSensibility / 250));
             if( nextRotationX < degToRad(90) && nextRotationX > degToRad(-90)){
                 _this.camera.playerBox.rotation.x+=evt.movementY * 0.001 * (_this.angularSensibility / 250);
